@@ -12,4 +12,5 @@ module.exports = {
   // lowerCaseLng: true,
   localePath: "./public/locales",
   localeStructure: "{{lng}}/{{ns}}",
+  preload: true,
 };
