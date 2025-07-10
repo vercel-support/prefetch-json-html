@@ -1,6 +1,3 @@
-const path = require("node:path");
-const fs = require("node:fs");
-
 const locales = ["pl-PL", "en-US"];
 
 /** @type {import('next-i18next').UserConfig} */
@@ -13,7 +10,10 @@ module.exports = {
   },
   ns: ["common"],
   // lowerCaseLng: true,
-  localePath: path.join(__dirname, "static", "locales"),
+  localePath:
+    typeof window === "undefined"
+      ? require("path").resolve("./static/locales")
+      : "/locales",
   localeStructure: "{{lng}}/{{ns}}",
   preload: true,
 };
