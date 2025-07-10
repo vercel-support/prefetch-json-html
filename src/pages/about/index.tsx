@@ -1,5 +1,6 @@
 import { GetStaticProps } from "next";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 
 export default function About() {
@@ -13,9 +14,12 @@ export default function About() {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
-    props: { foo: "bar" },
+    props: {
+      ...(await serverSideTranslations(locale as string, ["common"])),
+      foo: "bar",
+    },
     revalidate: 60 * 60,
   };
 };

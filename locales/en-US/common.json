@@ -2,5 +2,6 @@
   "home": "Home",
   "greeting": "Hello",
   "about": "About us",
+  "dynamic": "Dynamic",
   "goto": "Go to \"{{link}}\""
 }

@@ -2,5 +2,6 @@
   "home": "Strona główna",
   "greeting": "Cześć",
   "about": "O nas",
+  "dynamic": "Dynamiczne",
   "goto": "Przejdź do \"{{link}}\""
 }

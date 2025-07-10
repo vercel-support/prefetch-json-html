@@ -1,5 +1,6 @@
 import { GetStaticProps } from "next";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -18,11 +19,15 @@ export default function Dynamic() {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const { slug } = context.params || { slug: [] };
+export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
+  const { slug } = params || { slug: [] };
 
   return {
-    props: { foo: "bar", slug },
+    props: {
+      ...(await serverSideTranslations(locale ?? 'pl-PL', ['common'])),
+      foo: "bar",
+      slug,
+    },
     revalidate: 60 * 60,
   };
 };
