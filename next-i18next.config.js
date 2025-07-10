@@ -10,7 +10,8 @@ module.exports = {
   },
   ns: ["common"],
   // lowerCaseLng: true,
-  localePath: require("path").resolve("./public/locales"),
+  localePath:
+    typeof window === "undefined" ? __dirname + "/public/locales" : "/locales",
   localeStructure: "{{lng}}/{{ns}}",
   preload: true,
 };
