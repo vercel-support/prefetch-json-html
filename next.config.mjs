@@ -6,6 +6,6 @@ export default {
     locales: i18n.i18n.locales,
     localeDetection: i18n.i18n.localeDetection,
   },
-  basePath: "/pl",
+  // basePath: "/pl",
   reactStrictMode: true,
 };
