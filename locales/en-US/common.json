@@ -1,5 +1,6 @@
 {
   "home": "Home",
   "greeting": "Hello",
-  "about": "About us"
+  "about": "About us",
+  "goto": "Go to \"{{link}}\""
 }

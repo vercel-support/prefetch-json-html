@@ -6,9 +6,9 @@ export default function About() {
   const { t } = useTranslation("common");
 
   return (
-    <main className={`flex flex-col items-center justify-between p-24`}>
+    <main className="text-center p-24 bg-green-700">
       <h1>{t("about")}</h1>
-      <Link href="/">{t("home")}</Link>
+      <Link href="/">{t("goto", { link: t("home") })}</Link>
     </main>
   );
 }

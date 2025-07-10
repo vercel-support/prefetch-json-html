@@ -1,5 +1,6 @@
 {
   "home": "Strona główna",
   "greeting": "Cześć",
-  "about": "O nas"
+  "about": "O nas",
+  "goto": "Przejdź do \"{{link}}\""
 }
