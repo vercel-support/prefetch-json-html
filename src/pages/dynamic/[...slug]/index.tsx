@@ -4,6 +4,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+export const dynamic = "force-static";
+
 export default function Dynamic() {
   const router = useRouter();
   const { slug } = router.query;
