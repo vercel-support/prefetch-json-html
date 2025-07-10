@@ -11,9 +11,7 @@ module.exports = {
   ns: ["common"],
   // lowerCaseLng: true,
   localePath:
-    typeof window === "undefined"
-      ? require("path").resolve("./static/locales")
-      : "/locales",
+    typeof window === "undefined" ? __dirname + "/static/locales" : "/locales",
   localeStructure: "{{lng}}/{{ns}}",
   preload: true,
 };
