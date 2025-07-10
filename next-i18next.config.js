@@ -10,7 +10,7 @@ module.exports = {
   },
   ns: ["common"],
   // lowerCaseLng: true,
-  localePath: "./public/locales",
+  localePath: "./static/locales",
   localeStructure: "{{lng}}/{{ns}}",
   preload: true,
 };
