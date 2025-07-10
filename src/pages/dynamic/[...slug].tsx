@@ -24,7 +24,7 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'pl-PL', ['common'])),
+      ...(await serverSideTranslations(locale ?? "pl-PL", ["common"])),
       foo: "bar",
       slug,
     },
@@ -35,6 +35,6 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
 export async function getStaticPaths() {
   return {
     paths: [],
-    fallback: "blocking",
+    fallback: true,
   };
 }
