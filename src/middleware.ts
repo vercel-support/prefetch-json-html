@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import i18n from "../next-i18next.config";
-import plT from "../static/locales/pl-PL/common.json";
-import enT from "../static/locales/en-US/common.json";
 
 const defaultLocale = "pl-PL";
 const basePath = "/pl";
@@ -10,8 +8,6 @@ const locales = (i18n.i18n.locales || []).filter(
 );
 
 export function middleware(req: NextRequest) {
-  const ts = [plT, enT];
-
   const { pathname } = req.nextUrl;
 
   // Automatically redirect homepage to the default locale

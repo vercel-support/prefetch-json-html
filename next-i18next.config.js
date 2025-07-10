@@ -10,8 +10,7 @@ module.exports = {
   },
   ns: ["common"],
   // lowerCaseLng: true,
-  localePath:
-    typeof window === "undefined" ? __dirname + "/static/locales" : "/locales",
+  // localePath: "/static/locales",
   localeStructure: "{{lng}}/{{ns}}",
   preload: true,
 };
