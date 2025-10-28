@@ -1,14 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
-import i18n from "../next-i18next.config";
+// import i18n from "../next-i18next.config";
 
-const defaultLocale = "pl-PL";
-const basePath = "/pl";
-const locales = (i18n.i18n.locales || []).filter(
-  (locale: string) => locale !== "default"
-);
+// const defaultLocale = "pl-PL";
+// const basePath = "/pl";
+// const locales = (i18n.i18n.locales || []).filter(
+//   (locale: string) => locale !== "default"
+// );
 
 export function middleware(req: NextRequest) {
-  const { pathname } = req.nextUrl;
+  // const { pathname } = req.nextUrl;
 
   // Automatically redirect homepage to the default locale
   /* if (pathname === "/") {
